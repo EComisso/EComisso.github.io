@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>slideDown demo</title>
+  <style>
+  div {
+    background: #de9a44;
+    margin: 3px;
+    width: 80px;
+    height: 40px;
+    display: none;
+    float: left;
+	text-align:center;
+	line-height:40px;
+  }
+  .box{
+	  background-color:#F00;
+	  height:40px;
+	  width:100px;
+	  }
+  .box2{
+	  background-color:#FC6;
+	  height:40px;
+	  width:80px;
+	  }
+  .box3{
+	  background-color:#0F0;
+	  height:40px;
+	  width: 150px;
+	  }
+   p{
+	   margin-top:50px;
+	   }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+Click me!
+<div class="box">
+	Is
+</div>
+
+<div class="box2">
+	this
+</div>
+
+<div class="box3">
+	okey?
+</div>
+
+	<p>
+    	Welcome to the site <b id="number">0</b>
+    </p>
+	<input type="button" onClick="changeNumber()" value="Change Number">
+ 
+	<script>
+		function changeNumber()
+		{ 	while(true)
+			{
+				var mittNummer = prompt("Skriv ett tal", "Tal");
+				if (isNaN(mittNummer) || mittNummer == "")
+				{
+					alert("Error");
+				}
+				else
+				{
+					document.getElementById("number").innerHTML = mittNummer;
+					break;
+				}
+			}
+		}
+		
+		$(document.body).click(function () {
+  			if ($("div.box").is(":hidden") && $("div.box2").is(":hidden") && $("div.box3").is(":hidden")) 
+  			{
+    			$("div.box").slideDown("fast");
+  			} 
+ 			else if ($("div.box").is(":visible") && $("div.box3").is(":hidden") && $("div.box2").is(":hidden"))
+  			{
+	  			$("div.box2").slideDown("fast");
+	  			$("div.box").hide("fast");
+  			}
+  			else if ($("div.box2").is(":visible") && $("div.box3").is(":hidden") && $("div.box").is(":hidden"))
+  			{
+	 			$("div.box3").slideDown("fast");
+	  			$("div.box2").hide("fast");
+  			}
+			else if ($("div.box3").is(":visible") && $("div.box2").is(":hidden") && $("div.box").is(":hidden"))
+			{
+				$("div.box2").slideDown("fast");
+				$("div.box3").hide("fast");
+			}
+			else if ($("div.box2").is(":visible") && $("div.box3").is(":hidden") && $("div.box").is(":hidden"))
+			{
+				$("div.box").slideDown("fast");
+				$("div.box2").hide("fast");
+			}
+			else if ($("div.box").is(":visible") && $("div.box3").is(":hidden") && $("div.box2").is(":hidden"))
+			{
+				$("div.box").hide("fast");
+			}
+		});
+		
+		
+		<!--$( document.body ).click(function () {-->
+  		<!--	if ( $( "div:first" ).is( ":hidden" ) ) {-->
+   		<!--		 $( "div" ).slideDown( "slow" );-->
+  		<!--	} else {-->
+    	<!--		$( "div" ).hide( "fast" );-->
+  		<!--	}-->
+		<!--});-->
+	</script>
+</body>
+</html>
