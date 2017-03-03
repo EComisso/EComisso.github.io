@@ -1,0 +1,28 @@
+if ($(".box").is(":visible") && $("nav").is(":visible") && $("header").is(":visible") && $("footer").is(":visible")) 
+		{
+			$("button.slideDown").click(function() {
+  			$(".box").slideToggle("medium");
+  			$("nav").slideToggle("medium");
+  			$("header").slideToggle("medium");
+  			$("footer").slideToggle("medium");
+			});
+		}
+
+
+$("button").click(function() {
+  		$(".box").slideUp("medium");
+  		$("nav").slideUp("medium");
+  		$("header").slideUp("medium");
+  		$("footer").slideUp("medium");
+		});
+
+
+		else if ($(".box").is(":hidden") && $("nav").is(":hidden") && $("header").is(":hidden") && $("footer").is(":hidden"))
+		{
+			$("button").click(function() {
+  			$(".box").slideDown("medium");
+  			$("nav").slideDown("medium");
+  			$("header").slideDown("medium");
+  			$("footer").slideDown("medium");
+			});
+		}
