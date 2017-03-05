@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<meta charset="utf-8">
+	<title>Airbus</title>	
+	<link rel="stylesheet" type="text/css" href="AirbusCSS.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+	<div id="storbox">
+		<header>
+			<div class="text">
+				Commercial Aircraft
+			</div>
+			<a href="AirbusHTML.html" class="hem">
+				Airbus
+			</a>			
+		</header>
+		<nav>
+			<ul>
+				<li><a href="AirbusA320.html">A320neo Family</a></li>
+				<li><a href="AirbusA330.html">A330 Family</a></li>
+				<li><a href="AirbusA350.html">A350 XWB Family</a></li>
+				<li><a href="AirbusA380.html">A380</a></li>
+			</ul>
+		</nav>
+		<article>
+			<div class="box">
+				<div class="vitstartbox">
+					<h3 class="start">
+						A COMPREHENSIVE PRODUCT LINE TO CATER FOR ANY MARKET
+					</h3>
+					<p class="textstart">
+						Airbus’ diverse product line includes everything from passenger aircraft to freighters and private jets. From short haul single-aisle aircraft to long-range widebody jetliners. With every aircraft family boasting cutting edge design, superior comfort and unparalleled efficiency they help set the standard for the modern aviation industry. No matter who is flying, whether it’s VVIPs or government officials, frequent flying business passengers or holiday makers jetting off for a relaxing break, passengers can relax knowing that every aspect of an Airbus aircraft has been designed to be as comfortable, efficient and innovative as possible; creating relaxing environments for passengers, pilots and crew. 
+						<br>
+						<br>
+						Ranging in size from 100 seat jet liners to the double deck A380 that is capable of transporting 600 passengers the total versatility of Airbus’ product line allows it to offer a range of tailored solutions to meet the needs of any airline and their market – from low-cost and full-service carriers to the air freight and VIP transport segments – whilst continuously ensuring the very best in efficiency and experience.
+					</p>
+					<hr>
+					<h3 class="start">
+						THE HIGHEST STANDARDS OF COMFORT
+					</h3>
+					<p class="textstart">
+						Passenger comfort is always a priority for Airbus. Whether it is advances in in-flight entertainment, offering the widest seats available or creating spacious and elegant interiors for every aircraft; Airbus understands the important role a relaxing environment will have in providing the best possible experience to passengers. Whether it is the unique interiors, social areas or enviable suites of the iconic A380 or the superior short haul comfort available on the A320 family aircraft; Airbus are dedicated to designing the most comfortable cabins possible. 
+						<br>
+						<br>
+						This devotion to passenger comfort has been further enhanced by the development of Airspace by Airbus, our new signature aircraft interior. Inspired by the innovative cabin developed for the A350 XWB, Airspace encompasses four key dimensions – comfort, ambience, services and design. Airspace cabins offer more personal space, unique welcome areas and Airbus’ signature design elements; giving passengers a pleasant experience that they will want to revisit again and again. 
+					</p>
+					<hr>
+					<h3 class="start">
+						TECHNOLOGICAL INNOVATIONS
+					</h3>
+					<p class="textstart">
+						Airbus remain at the cutting edge of the aviation industry; leading the way in terms of innovation and progress. With the desire to continuously improve technology embedded within the heart of the company Airbus is constantly able to deliver proven new technology that pushes the boundaries of what is possible meaning all stakeholders can benefit from proven high quality improvements in design, manufacturing, operations and maintenance. Such advances include the introduction of full fly-by-wire flight controls technology, employing advanced materials in its airframes, and developing cockpit designs that improve pilot workload and efficiency.
+						<br>
+						<br> 
+						These technological innovations also allow Airbus to be at the forefront of the aviation industry’s push to achieve greater Eco Efficiency. The result is quieter jetliners with reduced fuel consumption, lower noise levels and fewer emissions which also perform at the very highest level, proven by the enviable reliability rates of all Airbus aircraft.
+					</p>
+				</div>
+				<div class="bildstart">
+				</div>
+			</div>
+			<footer>				
+				<a href="https://www.facebook.com/airbus/" target="_blank" class="facebook"></a>
+				<a href="https://twitter.com/airbus" target="_blank" class="twitter"></a>
+				<a href="https://www.instagram.com/airbus/" target="_blank" class="instagram"></a>
+				<a href="https://www.youtube.com/user/airbus" target="_blank" class="youtube"></a>
+			</footer>
+
+			<button id="Up" class="slideUp"></button>
+			<button id="Down" class="slideDown"></button>
+		</article>		
+	</div>
+	
+	<script>
+		$("button#Down").hide();
+
+		$("button#Up").click(function() {
+  		$(".box").slideUp("medium");
+  		$("nav").slideUp("medium");
+  		$("header").slideUp("medium");
+  		$("footer").slideUp("medium");
+  		$("button#Down").show();
+  		$(this).hide();
+		});
+
+		$("button#Down").click(function() {
+  		$(".box").slideDown("medium");
+  		$("nav").slideDown("medium");
+  		$("header").slideDown("medium");
+  		$("footer").slideDown("medium");
+  		$("button#Up").show();
+  		$(this).hide();
+		});
+	</script>
+</body>
+</html>
