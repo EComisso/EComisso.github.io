@@ -1,0 +1,578 @@
+@charset "utf-8";
+
+body{
+	margin:0;
+	padding:0;
+	font-family: 'swisop3regular';
+}
+
+@font-face {
+    font-family: 'swisop3regular';
+    src: url('swisop3-webfont.woff2') format('woff2'),
+         url('swisop3-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'assassinregular';
+    src: url('assassin-webfont.woff2') format('woff2'),
+         url('assassin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#storbox{
+	background-color:#1E1E1E;
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+
+#gamesImage{
+	height:100%;
+	width:50%;
+	float:left;
+	background-image: url(acspel.jpg);
+	background-size:cover;
+	background-position:center;
+}
+
+#movieImage{
+	height:100%;
+	width:50%;
+	float:right;
+	background-image:url(acmovie.jpg);
+	background-size:cover;
+	background-position:center;
+}
+
+.mainLink{
+	height:100%;
+	width:100%;
+	float:left;
+	background-color:rgba(26,26,26,0.62);
+}
+
+a.mainLink{
+	font-size:58px;
+	text-align:center;
+	display: block;
+	line-height:900px;
+	text-decoration:none;
+	color:#FFF;
+	font-family:"assassinregular";
+}
+
+a.mainLink:hover{
+	transition: ease-in 0.15s;
+	background-color:rgba(30,30,30,0.15);
+	color:#FFF;
+}
+
+header{
+	/*background-color:#800000;*/
+	height:12%;
+	width:100%;
+
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.1, #1E1E1E),
+	color-stop(1, #800000)
+);
+background-image: -o-linear-gradient(top, #1E1E1E 10%, #800000 100%);
+background-image: -moz-linear-gradient(top, #1E1E1E 10%, #800000 100%);
+background-image: -webkit-linear-gradient(top, #1E1E1E 10%, #800000 100%);
+background-image: -ms-linear-gradient(top, #1E1E1E 10%, #800000 100%);
+background-image: linear-gradient(to top, #1E1E1E 10%, #800000 100%);
+}
+
+header#headerFixed{
+	position: fixed;
+}
+
+a#logoImage{
+	height:115px;
+	width:120px;
+	background-image:url(Logo.png);
+	background-size:cover;
+	background-position:center;
+	display:block;
+	margin:0 auto;
+}
+
+a#headerButton{
+	height:60px;
+	width:160px;
+	line-height:67px;
+	display:block;
+	float:right;
+	margin-right: 38%;
+	font-size:58px;
+	text-align:center;
+	text-decoration:none;
+	margin-top:28px;
+	color:#FFF;
+	font-family:"assassinregular";
+}
+
+a#sourcesButton{
+	height:60px;
+	width:160px;
+	line-height:67px;
+	display:block;
+	float:left;
+	margin-left: 38%;
+	font-size:58px;
+	text-align:center;
+	text-decoration:none;
+	margin-top:28px;
+	color:#FFF;
+	font-family:"assassinregular";
+}
+
+a#headerButton:hover{
+	transition: ease-in 0.15s;
+	background-color:rgba(30,30,30,0.5);
+	color:#FFF;
+	border: 1px #FFF;
+	border-style: solid solid solid solid;
+}
+
+a#sourcesButton:hover{
+	transition: ease-in 0.15s;
+	background-color:rgba(30,30,30,0.5);
+	color:#FFF;
+	border: 1px #FFF;
+	border-style: solid solid solid solid;
+}
+
+a#dropButton{
+	height:60px;
+	width:130px;
+	line-height:70.5px;
+	float:left;
+	font-size:58px;
+	margin-left:40%;
+	margin-top:28px;
+	text-align:center;
+	text-decoration:none;
+	color:#FFF;
+	font-family:"assassinregular";
+}
+
+a#dropButton:hover{
+	transition: ease-in 0.15s;
+	background-color:rgba(30,30,30,0.25);
+	color:#FFF;
+}
+
+#dropContent{
+	display: none;
+	width:768px;
+	height:400px;
+	float:left;
+	margin-top:20px;
+	position: fixed;
+	left: 576px;
+	top: 97px;
+	background-color: rgba(30,30,30,0.7);
+	/*background-color:rgba(128,0,0,0.75);*/
+	/*background-image: url(BackgrundMenyLink.jpg);*/
+
+	/*background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, #800000),
+	color-stop(0.9, #1E1E1E)
+);
+background-image: -o-linear-gradient(top, #800000 0%, #1E1E1E 90%);
+background-image: -moz-linear-gradient(top, #800000 0%, #1E1E1E 90%);
+background-image: -webkit-linear-gradient(top, #800000 0%, #1E1E1E 90%);
+background-image: -ms-linear-gradient(top, #800000 0%, #1E1E1E 90%);
+background-image: linear-gradient(to top, #800000 0%, #1E1E1E 90%);*/
+}
+
+ul{
+	list-style: none;	
+	padding: 0;
+	margin: 0;
+}
+
+li#ac1{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 117px;
+}
+li#ac2{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: right;
+	position: fixed;
+	top: 117px;
+	margin-left: 384px;
+}
+li#ac2b{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 197px;
+}
+li#ac2r{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 197px;
+	margin-left: 384px;
+}
+li#ac3{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 277px;
+}
+li#ac4{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 277px;
+	margin-left: 384px;
+}
+li#acr{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 357px;
+}
+li#acu{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 357px;
+	margin-left: 384px;
+}
+li#acs{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 437px;
+}
+li#källor{
+	height: 80px;
+	width: 384px;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 437px;
+	margin-left: 384px;
+}
+
+a.links{
+	display: block;
+	height: 80px;
+	width: 384px;
+	text-align: center;
+	text-decoration:none;
+	color:#FFF;
+	font-family:"assassinregular";
+	font-size: 50px;
+	line-height: 88px;
+	background-color: rgba(30,30,30,0.62);
+}
+
+a.links:hover{
+	transition: ease-in 0.15s;
+	background-color:rgba(26,26,26,0.15);
+}
+
+#ac1Image{
+	height:88%;
+	width:11.1111%;
+	background-image:url(ac1.jpg);
+	background-size:cover;
+	background-position:center;
+	float:left;
+}
+
+#ac2Image{
+	height:88%;
+	width:11.1111%;
+	background-image:url(ac2.jpg);
+	background-size:cover;
+	background-position:center;
+	float:left;
+}
+
+#ac2bImage{
+	height:88%;
+	width:11.1111%;
+	background-image:url(ac2b.jpg);
+	background-size:cover;
+	background-position:center;
+	float:left;
+}
+
+#ac2rImage{
+	height:88%;
+	width:11.1111%;
+	background-image:url(ac2r.jpg);
+	background-size:cover;
+	background-position:center;
+	float:left;
+}
+
+#ac3Image{
+	height:88%;
+	width:11.1111%;
+	background-image:url(ac3.jpg);
+	background-size:cover;
+	background-position:center;
+	float:left;
+}
+
+#ac4Image{
+	height:88%;
+	width:11.1111%;
+	background-image:url(ac4.jpg);
+	background-size:cover;
+	background-position:center;
+	float:left;
+}
+
+#acrImage{
+	height:88%;
+	width:11.1111%;
+	background-image:url(acr.jpg);
+	background-size:cover;
+	background-position:center;
+	float:left;
+}
+
+#acuImage{
+	height:88%;
+	width:11.1111%;
+	background-image:url(acu.jpg);
+	background-size:cover;
+	background-position:center;
+	float:left;
+}
+
+#acsImage{
+	height:88%;
+	width:11.1111%;
+	background-image:url(acs.jpg);
+	background-size:cover;
+	background-position:center;
+	float:left;
+}
+
+.gamesLink{
+	height:100%;
+	width:100%;
+	float:left;
+	background-color:rgba(30,30,30,0.62);
+}
+
+a.gamesLink{
+	font-size:48px;
+	text-align:center;
+	display: block;
+	line-height:850px;
+	text-decoration:none;
+	color:#FFF;
+	font-family:"assassinregular";
+}
+
+.brotherhoodText{
+	letter-spacing:-2.5px;
+}
+
+a.gamesLink:hover{
+	transition: ease-in 0.15s;
+	background-color:rgba(26,26,26,0.15);
+	color:#FFF;
+}
+
+article{
+	background-color:#E1E1E1;
+	height:auto;
+	width:100%;
+	margin-top: 6.1%;
+	overflow:hidden;
+}
+
+#movieImagePage{
+	width:929px;
+	height:523px;
+	background-color:#FFF;
+	background-image: url(acmoviePage.jpg);
+	background-size: cover;
+	background-position: center;
+	margin-left: 25px;
+	margin-top: 25px;
+}
+
+#movieImagePage2{
+	width:948px;
+	height:533px;
+	background-color:#FFF;
+	background-image: url(acmoviePage2.jpg);
+	background-size: cover;
+	background-position: center;
+	float:right;
+	margin-top: 25px;
+}
+
+.movieText{
+	width: 924px;
+	height: 523px;
+	background-color: #FFF;
+	color: #000;
+	float: right;
+	font-size: 20px;
+	margin-top: 25px;
+	margin-right: 25px;
+}
+
+.movieText2{
+	width: 955px;
+	height: 533px;
+	background-color: #000;
+	color: #FFF;
+	float: left;
+	font-size: 20px;
+	margin-top: 25px;
+}
+
+h2{
+	margin-left:3%;
+	margin-top:2%;
+}
+
+p{
+	margin-left:3%;
+	margin-right:3%;
+	margin-bottom:0;
+}
+
+h2#mainCast{
+	margin-bottom:1%;
+}
+
+#movieVideo{
+	background-color:#FFF;
+	width:929px;
+	height:523px;
+	float:left;
+	margin-top: 25px;
+	margin-left: 25px;
+}
+
+#movieVideo2{
+	background-color:#FFF;
+	width:948px;
+	height:533px;
+	float:right;
+	/*clear: right;*/
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+footer{
+	width: 1903px;
+	height: 5%;
+	float:left;
+
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.1, #1E1E1E),
+	color-stop(1, #800000)
+);
+background-image: -o-linear-gradient(bottom, #1E1E1E 10%, #800000 100%);
+background-image: -moz-linear-gradient(bottom, #1E1E1E 10%, #800000 100%);
+background-image: -webkit-linear-gradient(bottom, #1E1E1E 10%, #800000 100%);
+background-image: -ms-linear-gradient(bottom, #1E1E1E 10%, #800000 100%);
+background-image: linear-gradient(to bottom, #1E1E1E 10%, #800000 100%);
+}
+
+#facebook{
+	width:48px;
+	height:48px;
+	background-image:url(facebook.png);
+	background-size:cover;
+	background-position:center;
+	float: left;
+	margin-left: 853.5px;
+}
+
+#facebook:hover{
+	background-color: #1E1E1E;
+	opacity: 0.75;
+}
+
+#twitter{
+	width:48px;
+	height:48px;
+	background-image:url(twitter.png);
+	background-size:cover;
+	background-position:center;
+	float: left;
+}
+
+#twitter:hover{
+	background-color: #1E1E1E;
+	opacity: 0.75;
+}
+
+#instagram{
+	width:48px;
+	height:48px;
+	background-image:url(instagram.png);
+	background-size:cover;
+	background-position:center;
+	float: left;
+}
+
+#instagram:hover{
+	background-color: #1E1E1E;
+	opacity: 0.75;
+}
+
+#youtube{
+	width:48px;
+	height:48px;
+	background-image:url(youtube.png);
+	background-size:cover;
+	background-position:center;
+	float: left;
+}
+
+#youtube:hover{
+	background-color: #1E1E1E;
+	opacity: 0.75;
+}
