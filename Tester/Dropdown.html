@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dropdown</title>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="jquery.slides.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="Dropdown.css">
+</head>
+<body>
+	<div id="storbox">
+		<nav>
+			<button class="dropButton">
+				<div class="dropContent">
+					<ul>
+						<li><a href="#" class="links">Link 1</a></li>
+						<li><a href="#" class="links">Link 2</a></li>
+						<li><a href="#" class="links">Link 3</a></li>
+					</ul>
+				</div>
+			</button>
+		</nav>
+
+		<article>	
+			<!--<div class="slider">
+				<figure>
+					<img src="nature1.jpg">
+					<img src="nature2.jpg">
+					<img src="nature3.jpg">
+					<img src="nature4.jpg">
+					<img src="nature5.jpg">
+				</figure>
+			</div>-->
+
+			<!--<div class="slider">
+				<figure>
+					<div class="slide">
+						<p>Slide One</p>
+						<img src="nature1.jpg">
+					</div>
+
+					<div class="slide">
+						<p>Slide Two</p>
+						<img src="nature2.jpg">
+					</div>
+
+					<div class="slide">
+						<p>Slide Three</p>
+						<img src="nature3.jpg">
+					</div>
+
+					<div class="slide">
+						<p>Slide Four</p>
+						<img src="nature4.jpg">
+					</div>
+
+					<div class="slide">
+						<p>Slide Five</p>
+						<img src="nature5.jpg">
+					</div>
+				</figure>
+			</div>-->
+
+			<!--<div class="slider">
+				<img id="myPhoto" src="nature1.jpg" height="450" width="800">
+			</div>-->
+
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<img src="nature1.jpg" width="800" height="450">
+				</div>
+
+				<div class="mySlides fade">
+					<img src="nature2.jpg" width="800" height="450">
+				</div>
+
+				<div class="mySlides fade">
+					<img src="nature3.jpg" width="800" height="450">
+				</div>
+
+				<div class="mySlides fade">
+					<img src="nature4.jpg" width="800" height="450">
+				</div>
+
+				<div class="mySlides fade">
+					<img src="nature5.jpg" width="800" height="450">
+				</div>
+
+				<!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+
+				<a class="left" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="right" onclick="plusSlides(1)">&#10095;</a>
+
+				<div class="dotsCenter">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
+				</div>
+			</div>
+
+		</article>
+	</div>
+
+	<script>
+		/*$(".dropButton").click(function() {
+			$(".dropContent").toggle();
+		});*/
+
+		/*var myImage = documet.getElementById("myPhoto");
+
+		var imageArray = ["nature1.jpg", "nature2.jpg", "nature3.jpg", "nature4.jpg", "nature5.jpg"];
+
+		var imageIndex = 0;
+
+		function changeImage(){
+			myPhoto.setAttribute("src", imageArray[imageIndex]);
+			imageIndex++;
+			if (imageIndex >= imageArray.length) {
+				imageIndex = 0;
+			}
+		}
+
+		var intervalHandle = setInterval(changeImage, 2000);
+
+		myPhoto.onclick = function(){
+			clearInterval(intervalHandle);
+		}*/
+		
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n){
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n){
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n){
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+
+			if (n > slides.length) {
+				slideIndex = 1;
+			}
+			if (n < 1) {
+				slideIndex = slides.length;
+			}
+
+			for (i = 0; i < slides.length; i++){
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++){
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+	</script>
+</body>
+</html>
+
